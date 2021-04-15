@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Login</ion-title>
+        <ion-title>Native</ion-title>
         <ion-button
-          href="/native"
+          href="/home"
           fill="clear"
-        >Native</ion-button>
+        >Home</ion-button>
       </ion-toolbar>
     </ion-header>
 
@@ -14,24 +14,24 @@
       <h1>Don't put real passwords here</h1>
 
       <ion-item>
-        <ion-input
+        <input
           placeholder="Username"
           autocomplete="username"
           :autofocus="true"
           v-model="username"
-          @ion-input="inputTrigger"
-          @ion-change="changeTrigger"
-          @ion-blur="blurTrigger"
-        ></ion-input>
+          @input="inputTrigger"
+          @change="changeTrigger"
+          @blur="blurTrigger"
+        />
       </ion-item>
 
       <ion-item>
-        <ion-input
+        <input
           placeholder="Password"
           type="password"
           autocomplete="current-password"
           v-model="password"
-        ></ion-input>
+        />
       </ion-item>
 
       <ion-button
@@ -46,17 +46,16 @@
 </template>
 
 <script lang="ts">
-import { IonButton, IonContent, IonHeader, IonInput, IonItem, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButton, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Login',
+  name: 'Native',
 
   components: {
     IonButton,
     IonContent,
     IonHeader,
-    IonInput,
     IonItem,
     IonPage,
     IonTitle,
